@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOISIRS</title>
+    <link rel="stylesheet" href="../budge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a class="header__logo" href="../index.html">
+                    <p>TRAOFIN</p>
+                </a>
+                <ul class="header__menu">
+                    <li class="header__menu__item"><a href="../index.html">ACCUEIL</a></li>
+                    <li class="header__menu__item"><a href="../catégories.html">CATÉGORIES</a></li>
+                    <li class="header__menu__item"><a href="../connection.html">SE DECONNECTER</a></li>
+                </ul>
+                <a href="#" class="btn-menu"><span></span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>AUTRES</h1>
+        <section>
+            <div class="container">
+                <div class="box1">
+                    <a id="btn1" href="">Nouveau Budget</a>
+                    <a id="btn2" href="">Ajouter une Dépense</a>
+                </div>
+                <div class="box2">
+                    <div class="point_content">
+                        <h2>BUDGET</h2>
+                        <i class="fa-solid fa-box"></i>
+                        <h4 id="bud" class="green">CFA 0</h4>
+                    </div>
+                    <div class="point_content">
+                        <h2>DEPENSES</h2>
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <h4 id="depense" class="red"></h4>
+                    </div>
+                    <div class="point_content">
+                        <h2>SOLDE</h2>
+                        <i class="fa-solid fa-sack-dollar"></i>
+                        <h4 id="solde"></h4>
+                    </div>
+                </div>
+                
+                <div class="clear_btn">
+                    <a class="restart__btn" href="">Réinitialiser le compte</a>
+                </div>
+                <div class="clear__modal">
+                    <p>Cette action supprimera tout votre budget et toutes vos dépenses concernant cette catégorie <br>Voudriez-vous continuer ?</p>
+                    <div class="confirm__btn">
+                        <a id="delet" class="left__btn" href="">OUI</a>
+                        <a class="right__btn" href="">NON</a>
+                    </div>
+                </div>
+            </div>
+            <div class="box3">
+                <div class="container">
+                    <div class="search__content">
+                        <label for="search">Rechercher une dépense</label>
+                        <input type="search" id="search">
+                    </div>
+                    <div class="box__content">
+                        <div class="table">
+                            <table border="1"; style="border-collapse: collapse;" class="d-none" id="table">
+                                <thead>
+                                    <tr id="tr">
+                                        <th>N°</th>
+                                        <th>Motif</th>
+                                        <th>PRIX</th>
+                                        <th>ACTIONS</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody"></tbody>
+                            </table>
+                        </div>
+                        <div class="chart">
+                            <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+                        </div>
+                    </div>
+                    <h6 id="modify"></h6>
+                </div>
+            </div>
+        </section>
+        <div class="budget__modal">
+            <a class="closeButton1" href="#"></a>
+            <form id="budget">
+                <label>Veuillez entrer votre budget</label><br>
+                <input id="budget_somm" class="input" type="number"><br>
+                <input class="bt" type="submit" value="Mettre à jour">
+            </form>
+        </div>
+
+        <div class="expense__modal">
+            <a class="closeButton2" href=""></a>
+            <form id="formdepense" data-task="addExpense" data-old="0">
+                <p>
+                    <label>NOM DE LA DÉPENSE</label>
+                    <input id="nom_depense" class="input" type="text">
+                </p>
+                <p>
+                    <label>SOMME DE LA DÉPENSE</label>
+                    <input id="prix_depense" class="input" type="number">
+                </p>
+                <input class="bt" type="submit" value="Ajouter">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer__content">
+            <div>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+            </div>
+            <p>© TRAOFIN,Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="budget6.js"></script>
+    <script src="/index.js"></script>
+</body>
+</html>

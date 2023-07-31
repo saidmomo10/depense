@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="budge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <a class="header__logo" href="../index.html">
+                    <p>TRAOFIN</p>
+                </a>
+                <ul class="header__menu">
+                    <li class="header__menu__item"><a href="../index.html">ACCUEIL</a></li>
+                    <li class="header__menu__item"><a href="catégories.html">CATÉGORIES</a></li>
+                    <li class="header__menu__item"><a href="../connection.html">SE DECONNECTER</a></li>
+                    <li class="mail"></li>
+                </ul>
+                <a href="#" class="btn-menu"><span></span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="banner__top__left">
+                    <h1>Bienvenue <span class="toto"></span> sur <br> <span class="traofin">TRAOFIN</span></h1>
+                    <p>Votre application de suivi de vos dépenses personnelles</p>
+                    <div class="banner__btn">
+                        <a href="catégories.html">COMMENCER</a>
+                        <!-- <a href="vision.html">MA VISION</a> -->
+                    </div>
+            </div>
+            <div class="banner__top__right">
+                <img src="5361400.jpg" alt="">
+            </div>
+        </div>
+        
+        <div class="global_budget">
+            <div class="container">
+                <h2 class="titre__point">Budget global</h2>
+                <div class="global_budget_modal">
+                    <a class="closeButton1" href="#"></a>
+                    <form class="global_budget_form" action="" onsubmit="valider()">
+                        <label for="global_budget">Veuillez entrer votre budget global</label>
+                        <input id="glob" type="number">
+                        <input id="bt" type="submit" value="Valider">
+                    </form>
+                </div>
+                <div class="global_budget_content">
+                    <div class="global_budget_point">
+                        <p>SOMME EMISE : <span id="somme"></span></p>
+                        <p>RESTE : <span id="reste"></span></p>
+                    </div>
+                    <div class="global_budget_btn">
+                        <a id="global_budget_update" href="">Mettre à jour</a>
+                        <a id="global_budget_restart" href="">Réinitialiser</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="graphe_content">
+            <div class="container">
+                <h2 class="titre__point">Votre Point</h2>
+                <ul class="gallery">
+                    <div class="gallery__content">
+                        <li class="gallery_image">
+                            <canvas id="barCanvas_loisir" aria-label="chart" role="img"></canvas>
+                        </li>
+                        <a href="loisir/loisir.html">LOISIRS</a>
+                    </div>
+                    <div class="gallery__content">
+                        <li class="gallery_image">
+                            <canvas id="barCanvas_sante" aria-label="chart" role="img"></canvas>
+                        </li>
+                        <a href="santé/santé.html">SANTE</a>
+                    </div>
+                    <div class="gallery__content">
+                        <li class="gallery_image">
+                            <canvas id="barCanvas_transport" aria-label="chart" role="img"></canvas>
+                        </li>
+                        <a href="transport/transport.html">TRANSPORT</a>
+                    </div>
+                    <div class="gallery__content">
+                        <li class="gallery_image">
+                            <canvas id="barCanvas_famille" aria-label="chart" role="img"></canvas>
+                        </li>
+                        <a href="famille/famille.html">FAMILLE</a>
+                    </div>
+                    <div class="gallery__content">
+                        <li class="gallery_image">
+                            <canvas id="barCanvas_autres" aria-label="chart" role="img"></canvas>
+                        </li>
+                        <a href="autres/autres.html">AUTRES</a>
+                    </div>
+                </ul>
+            </div>    
+        </div>
+    </main>
+        <footer>
+            <div class="footer__content">
+                <div>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                </div>
+                <p>© TRAOFIN,Tous droits réservés.</p>
+            </div>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="form.js"></script>
+    <script src="index.js">
+
+    </script>
+</body>
+</html>

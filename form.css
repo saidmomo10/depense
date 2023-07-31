@@ -1,0 +1,131 @@
+*{
+    font-family: 'Geologica', sans-serif;;
+    font-size: 18px;
+    color: #1c2e33;
+}
+
+body{
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    justify-content: center;
+    text-align: center;
+}
+
+.trao{
+    color: #03c06b;
+    font-size: 25px;
+    display: block;
+    font-weight: 900;
+}
+
+.formulaire h1{
+    font-size: 50px;
+    
+    
+}
+
+.formulaire img{
+    width: 10%;
+}
+
+.formulaire{
+    top: 50%;
+    left: 50%;
+    transform: translate(50%,0%);
+    border: 1px solid #03c06b;
+    border-radius: 50px;
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.grp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid #1c2e33;
+    margin-top: 15px;
+    background: transparent;
+    
+}
+
+input::placeholder{
+    
+    font-weight: 900;
+}
+
+.btn input{
+    background: none;
+    border: solid 1px #03c06b;
+}
+
+.btn input:hover{
+    background: #03c06b;
+    cursor: pointer;
+}
+
+.bas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.bas a{
+    color: #03c06b;
+    font-weight: 500;
+}
+
+.bas a:hover{
+    
+}
+
+.message, .confirmation{
+    color: rgb(236, 205, 26);
+    font-weight: 900;
+    font-size: 20px;
+    animation-name: mess;
+    animation-duration: 3s;
+    animation: infinite;
+}
+
+.alert{
+    color: rgb(238, 82, 82);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* @keyframes mess{
+    0%{transform: translate(0%,0%);}
+    100%{transform: translate(0%,50%);
+    }
+} */
+
+.submit{
+    font-weight: 900;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 50px;
+    background-color:  rgb(236, 205, 26);
+}
+
+.refresh{
+    font-weight: 900;
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 50px;
+    background-color: blueviolet;
+}

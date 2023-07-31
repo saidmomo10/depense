@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des dépenses</title>
+    <link rel="stylesheet" href="budge.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geologica&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../accueil.html"><img src="Black_Modern_Design_Studio_Logo-removebg-preview.png" alt=""></a>
+            <ul>
+                <li><a href="catégories.html">CATÉGORIES</a></li>
+                <li><a href="">SE DECONNECTER</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titre">
+        <h1>TRANSPORT</h1>
+    </div>
+    <section>
+        <div class="part1">
+            <div class="box1">
+                <form id="budget">
+                    <label>Veuillez entrer votre budget</label><br>
+                    <input id="budget_somm" class="input" type="number"><br>
+                    <input class="bt" type="submit" value="Mettre à jour">
+                </form>
+            </div>
+            <div class="box2">
+                <form id="formdepense" data-task="addExpense" data-old="0">
+                    <label>NOM DE LA DÉPENSE</label>
+                    <input id="nom_depense" class="input" type="text"><br>
+                    <label>SOMME DE LA DÉPENSE</label>
+                    <input id="prix_depense" class="input" type="number"><br>
+                    <input class="bt" type="submit" value="Ajouter">
+                </form>
+            </div>
+        </div>
+        <div class="part2">
+            <div class="point">
+                <div class="point_content">
+                    <h2>BUDGET</h2>
+                    <i class="fa-solid fa-box"></i>
+                    <h4 id="bud" class="green">CFA 0</h4>
+                </div>
+                <div class="point_content">
+                    <h2>DEPENSES</h2>
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <h4 id="depense" class="red"></h4>
+                </div>
+                <div class="point_content">
+                    <h2>SOLDE</h2>
+                    <i class="fa-solid fa-sack-dollar"></i>
+                    <h4 id="solde"></h4>
+                </div>
+            </div>
+            <table border="2" style="border-collapse: collapse; border-radius: 55%;" class="d-none" id="table">
+                <thead>
+                    <tr >
+                        <th>NOM DE LA DÉPENSE</th>
+                        <th>PRIX</th>
+                        <th>MODIFICATION/SUPPRESSION</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </section>
+    <h6 id="modify"></h6>
+    <footer>
+        <div>
+            <img src="linkedin.svg" alt="">
+            <img src="facebook.svg" alt="">
+            <img src="twitter.svg" alt="">
+        </div>
+        <p>© TRAOFIN,Tous droits réservés.</p>
+    </footer>
+    <script src="budget.js"></script>
+</body>
+</html>
